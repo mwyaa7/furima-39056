@@ -8,7 +8,9 @@
 | email　　　　　　　　 | string              | null: false , unique: true|
 | encrypted_password    | string              | null: false               |
 | name_chinese characters|string        | null: false         　　　 |
+|first_name_chinese characters|string        |null: false|
 | name_katakana　　  | string                | null: false               |
+|first_name_katakana|string                  |null: false |
 | date_of_birth　　　　| string              | null: false |
 
 ## products Table
@@ -44,8 +46,7 @@
 |prefectures               |string                  |null: false |
 |municipality              |string                  |null: false |
 |adress                    |string                  |null: false |
-|building_name             |string                  |null: false |
-|telephone_number          |string                  |null: false |
+
 
 
 
