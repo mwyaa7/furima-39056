@@ -6,11 +6,10 @@
 |--------------------|---------------------|---------------------------|
 | nickname           | string              | null: false, unique: true |
 | email　　　　　　　　 | string              | null: false               |
-| encrypted_passwordpassword    | string              | null: false               |
-| encrypted_password_Reenter | string                | null: false               |
-| name_Chinese characters|string        | null: false         　　　 |
-| name_Katakana　　  | string                | null: false               |
-| date_ of_ birth　　　　| string              | null: false |
+| encrypted_password    | string              | null: false               |
+| name_chinese characters|string        | null: false         　　　 |
+| name_katakana　　  | string                | null: false               |
+| date_of_birth　　　　| string              | null: false |
 
 ## product infomation Table
 
