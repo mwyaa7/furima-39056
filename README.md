@@ -1,12 +1,6 @@
 # README
 
-<<<<<<< Updated upstream
 ## username Table
-=======
-<<<<<<< Updated upstream
-This README would normally document whatever steps are necessary to get the
-application up and running.
->>>>>>> Stashed changes
 
 | Column             | Type                | Options                   |
 |--------------------|---------------------|---------------------------|
@@ -45,7 +39,6 @@ application up and running.
 |user_infomation　　　　　　|string　　　　　　　　　　　　|null: false|
 |purchase_infomation　　　　|string　　　　　　　　　　　　|null: false|
 
-<<<<<<< Updated upstream
 ## shipping information　Table
 |Column　　　　　　　　　　　　|Type　　　　　　　　　　　　|Options　　　　　　　　|
 |------　　　　　　　　　　　　|----　　　　　　　　　　　　|-------　　　　　　　　|
@@ -55,59 +48,6 @@ application up and running.
 |adress                    |string                  |null: false |
 |building name             |string                  |null: false |
 |telephone number          |string                  |null: false |
-=======
-* Database creation
-=======
-## users Table
-
-| Column             | Type                | Options                   |
-|--------------------|---------------------|---------------------------|
-| nickname           | string              | null: false, unique: true |
-| email　　　　　　　　 | string              | null: false, unique: true             |
-| encrypted_password | string              | null: false               |
-| name_chinese character|string        | null: false         　　　 |
-|first_name_chinese character|string |null: false |
-| name_Katakana　　  | string                | null: false               |
-|first_name_Katakana　|string |null: false |
-| date_of_birth　　　　| string              | null: false |
-
-## products Table
-
- 
-|Column　　　　　　　　　　|Type　　　　　　　　　　　　　|Options　　　　　　　　　　　　
-|------　　　　　　　　　　|----　　　　　　　　　　　　　|------- 　　　　　　　　　　　　|
-|product_name　　　　　　|string 　　　　　　　　　　　|null: false |
-|product_description　　|text　　　　　　　　　　　　|null: false |
-|category_id　　　　　　　　|integer　　　　　　　　　　　 |null: false |
-|commodity_condition_id　　|integer 　　　　　　　　　　　　|null: false |
-|shipping_cost_id　　　　　　|integer　　　　　　　　　　　　|null: false |
-|region_of_origin_id　　　|integer　　　　　　　　　　　　　　|null: false |
-|estimated_shipping_date_id|integer　　　　　　　　　　  |null: false |
-|sellingprice|integer |null: false |
-
-## records Table
-|Column　　　　　　　　　　　|Type　　　　　　　　　　　　　|Options|
-|------　　　　　　　　　　　|----　　　　　　　　　　　　　|-------|
-|post_code　　　　　　　　　|string　　　　　　　　　　　　|null: false |
-|prefectures　　　　　　　　|string　　　　　　　　　　　　|null: false |
-|municipality　　　　　　　|string　　　　　　　　　　　　|null: false |
-|adress　　　　　　　　　　　|string　　　　　　　　　　　　|null: false |
-|building_name　　　　　　　|string　　　　　　　　　　　|null: false |
-|telephone_number　　　　　|string　　　　　　　　　　　|null: false |
-|user_infomation　　　　　　|string　　　　　　　　　　　　|null: false|
-|purchase_infomation　　　　|string　　　　　　　　　　　　|null: false|
-
-## items　Table
-|Column　　　　　　　　　　　　|Type　　　　　　　　　　　　|Options　　　　　　　　|
-|------　　　　　　　　　　　　|----　　　　　　　　　　　　|-------　　　　　　　　|
-|post_code                 |string                  |null: false |
-|prefectures               |string                  |null: false |
-|municipality              |string                  |null: false |
-|adress                    |string                  |null: false |
-|building_name             |string                  |null: false |
-|telephone_number          |string                  |null: false |
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 
 
 
