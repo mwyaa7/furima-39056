@@ -1,52 +1,51 @@
 # README
 
-## username Table
+## users Table
 
 | Column             | Type                | Options                   |
 |--------------------|---------------------|---------------------------|
 | nickname           | string              | null: false, unique: true |
-| email　　　　　　　　 | string              | null: false               |
+| email　　　　　　　　 | string              | null: false , unique: true|
 | encrypted_password    | string              | null: false               |
 | name_chinese characters|string        | null: false         　　　 |
 | name_katakana　　  | string                | null: false               |
 | date_of_birth　　　　| string              | null: false |
 
-## product infomation Table
+## products Table
 
  
 |Column　　　　　　　　　　|Type　　　　　　　　　　　　　|Options　　　　　　　　　　　　
 |------　　　　　　　　　　|----　　　　　　　　　　　　　|------- 　　　　　　　　　　　　|
-|images　　　　　　　　　　|string 　　　　　　　　　　　|null: false |
-|product name　　　　　　|string 　　　　　　　　　　　|null: false |
-|product description　　|string 　　　　　　　　　　　　|null: false |
-|category　　　　　　　　　|string　　　　　　　　　　　　 |null: false |
-|commodity condition　　|string 　　　　　　　　　　　　|null: false |
-|shipping cost　　　　　　|string 　　　　　　　　　　　　|null: false |
-|region of origin　　　　|string 　　　　　　　　　　　　|null: false |
-|estimated shipping date|string　　　　　　　　　　  |null: false |
-|selling price|string |null: false |
+|product_name　　　　　　|string 　　　　　　　　　　　  |null: false |
+|product_description　　|text 　　　　　　　　　　　　  |null: false |
+|category_id　　　　　　　　|integer　　　　　　　　　　　|null: false |
+|commodity_condition_id　　|integer 　　　　　　　　　 |null: false |
+|shipping_cost_id　　　　　　|integer　　　　　　　　　　|null: false |
+|region_of_origin_id　　　|integer　　　　　　　　　　　|null: false |
+|estimated_shipping_date_id|integer　　　　　　　　　 |null: false |
+|selling_price             |integer                |null: false |
 
-## purchase records Table
+## purchase_records Table
 |Column　　　　　　　　　　　|Type　　　　　　　　　　　　　|Options|
 |------　　　　　　　　　　　|----　　　　　　　　　　　　　|-------|
-|post code　　　　　　　　　|string　　　　　　　　　　　　|null: false |
+|post_code　　　　　　　　　|string　　　　　　　　　　　　|null: false |
 |prefectures　　　　　　　　|string　　　　　　　　　　　　|null: false |
 |municipality　　　　　　　|string　　　　　　　　　　　　|null: false |
 |adress　　　　　　　　　　　|string　　　　　　　　　　　　|null: false |
-|building name　　　　　　　|string　　　　　　　　　　　|null: false |
-|telephone number　　　　　|string　　　　　　　　　　　|null: false |
+|building_name　　　　　　　|string　　　　　　　　　　　|null: false |
+|telephone_number　　　　　|string　　　　　　　　　　　|null: false |
 |user_infomation　　　　　　|string　　　　　　　　　　　　|null: false|
 |purchase_infomation　　　　|string　　　　　　　　　　　　|null: false|
 
 ## shipping information　Table
 |Column　　　　　　　　　　　　|Type　　　　　　　　　　　　|Options　　　　　　　　|
 |------　　　　　　　　　　　　|----　　　　　　　　　　　　|-------　　　　　　　　|
-|post code                 |string                  |null: false |
+|post_code                 |string                  |null: false |
 |prefectures               |string                  |null: false |
 |municipality              |string                  |null: false |
 |adress                    |string                  |null: false |
-|building name             |string                  |null: false |
-|telephone number          |string                  |null: false |
+|building_name             |string                  |null: false |
+|telephone_number          |string                  |null: false |
 
 
 
