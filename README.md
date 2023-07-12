@@ -13,9 +13,10 @@
 |first_name_katakana|string                  |null: false |
 | date_of_birth　　　　| date              | null: false |
 
-t.references :users,foreign_key: true
+
 ### Association
 has_many:products
+has_many:purchase_records
 
 ## products Table
 
@@ -28,24 +29,27 @@ has_many:products
 |commodity_condition_id　　|integer 　　　　　　　　　 |null: false |
 |shipping_cost_id　　　　　　|integer　　　　　　　　　　|null: false |
 |prefecture_id　　　      |integer　　　　　　　　　　　|null: false |
+|product_cost　　　　　　　|integer　　　　　　　　　　　　|null: false|
 |estimated_shipping_date_id|integer　　　　　　　　　 |null: false |
 
 ### Association
 belongs_to:user
 
+
 ## purchase_records Table
 |Column　　　　　　　　　　　|Type　　　　　　　　　　　　　|Options|
 |------　　　　　　　　　　　|----　　　　　　　　　　　　　|-------|
-|user　　　　　　　　　      |string　　　　　　　　　　　　|null: false|
-|product　　　             |string　　　　　　　　　　　　|null: false|
+|user　　　　　　　　　      |references　　　　　　　　　　　　|null: false, foreign_key: true |
+|product　　　             |references　　　　　　　　　　　　|null: false, foreign_key: true |
 ### Association
 has_one:shipping infomation
+belongs_to:user
 
 ## shipping information　Table
 |Column　　　　　　　　　　　　|Type　　　　　　　　　　　　|Options　　　　　　　　|
 |------　　　　　　　　　　　　|----　　　　　　　　　　　　|-------　　　　　　　　|
 |post_code                 |string                  |null: false |
-|prefectures               |string                  |null: false |
+|prefecture_id               |string                  |null: false |
 |municipality              |string                  |null: false |
 |adress                    |string                  |null: false |
 |building_name　　　　　　　|string　　　　　　　　　　　|unique: true |
