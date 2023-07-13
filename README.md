@@ -57,6 +57,7 @@ belongs_to:product
 |adress                    |string                  |null: false |
 |building_name　　　　　　　|string　　　　　　　　　　　|unique: true |
 |telephone_number　　　　　|string　　　　　　　　　　　|null: false |
+|purchase_record        |references　　　　　　　　　　　　|null: false, foreign_key: true |
 ### Association
 belongs_to:purchase_record
 
