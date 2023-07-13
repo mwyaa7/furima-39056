@@ -15,8 +15,8 @@
 
 
 ### Association
-has_many:products
-has_many:purchase_records
+has_many :products
+has_many :purchase_records
 
 ## products Table
 
@@ -34,8 +34,8 @@ has_many:purchase_records
 |user　　　　　　　　　      |references　　　　　　　　　　　　|null: false, foreign_key: true |
 
 ### Association
-belongs_to:user
-has_one:purchase_record
+belongs_to :user
+has_one :purchase_record
 
 
 ## purchase_records Table
@@ -45,21 +45,21 @@ has_one:purchase_record
 |product　　　             |references　　　　　　　　　　　　|null: false, foreign_key: true |
 ### Association
 has_one:shipping_infomation
-belongs_to:user
-belongs_to:product
+belongs_to :user
+belongs_to :product
 
 ## shipping information　Table
 |Column　　　　　　　　　　　　|Type　　　　　　　　　　　　|Options　　　　　　　　|
 |------　　　　　　　　　　　　|----　　　　　　　　　　　　|-------　　　　　　　　|
-|post_code_id                 |string                  |null: false |
-|prefecture_id               |string                  |null: false |
+|post_code                 |string                  |null: false |
+|prefecture_id               |integer                 |null: false |
 |municipality              |string                  |null: false |
 |adress                    |string                  |null: false |
-|building_name　　　　　　　|string　　　　　　　　　　　|unique: true |
+|building_name　　　　　　　|string　　　　　　　　　　　| -------|
 |telephone_number　　　　　|string　　　　　　　　　　　|null: false |
 |purchase_record        |references　　　　　　　　　　　　|null: false, foreign_key: true |
 ### Association
-belongs_to:purchase_record
+belongs_to :purchase_record
 
 
 
