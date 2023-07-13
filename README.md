@@ -31,9 +31,11 @@ has_many:purchase_records
 |prefecture_id　　　      |integer　　　　　　　　　　　|null: false |
 |product_cost　　　　　　　|integer　　　　　　　　　　　　|null: false|
 |estimated_shipping_date_id|integer　　　　　　　　　 |null: false |
+|user　　　　　　　　　      |references　　　　　　　　　　　　|null: false, foreign_key: true |
 
 ### Association
 belongs_to:user
+has_one:purchase_record
 
 
 ## purchase_records Table
@@ -42,13 +44,14 @@ belongs_to:user
 |user　　　　　　　　　      |references　　　　　　　　　　　　|null: false, foreign_key: true |
 |product　　　             |references　　　　　　　　　　　　|null: false, foreign_key: true |
 ### Association
-has_one:shipping infomation
+has_one:shipping_infomation
 belongs_to:user
+belongs_to:product
 
 ## shipping information　Table
 |Column　　　　　　　　　　　　|Type　　　　　　　　　　　　|Options　　　　　　　　|
 |------　　　　　　　　　　　　|----　　　　　　　　　　　　|-------　　　　　　　　|
-|post_code                 |string                  |null: false |
+|post_code_id                 |string                  |null: false |
 |prefecture_id               |string                  |null: false |
 |municipality              |string                  |null: false |
 |adress                    |string                  |null: false |
