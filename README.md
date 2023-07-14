@@ -48,7 +48,7 @@ has_one:shipping_infomation
 belongs_to :user
 belongs_to :product
 
-## shipping information　Table
+## shipping pieces of information　Table
 |Column　　　　　　　　　　　　|Type　　　　　　　　　　　　|Options　　　　　　　　|
 |------　　　　　　　　　　　　|----　　　　　　　　　　　　|-------　　　　　　　　|
 |post_code                 |string                  |null: false |
