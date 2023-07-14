@@ -21,7 +21,7 @@ has_many :purchase_records
 ## products Table
 
  
-|Column　　　　　　　　　　|Type　　　　　　　　　　　　　|Options　　　　　　　　　　　　
+|Column　　　　　　　　　　|Type　　　　　　　　　　　　　|Options　　　　　　　　　　　　　|
 |------　　　　　　　　　　|----　　　　　　　　　　　　　|------- 　　　　　　　　　　　　|
 |product_name　　　　　　|string 　　　　　　　　　　　  |null: false |
 |product_description　　|text 　　　　　　　　　　　　  |null: false |
@@ -44,7 +44,7 @@ has_one :purchase_record
 |user　　　　　　　　　      |references　　　　　　　　　　　　|null: false, foreign_key: true |
 |product　　　             |references　　　　　　　　　　　　|null: false, foreign_key: true |
 ### Association
-has_one:shipping_infomation
+has_one:address
 belongs_to :user
 belongs_to :product
 
