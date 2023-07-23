@@ -6,4 +6,10 @@ class User < ApplicationRecord
         
 
   validates :nickname, presence: true
+  validates :email, presence: true
+  validates :encrypted_password, presence: true
+  validates :name_chinese_characters, presence: true
+  validates :first_name_chinese_characters, presence: true
+  validates :name_katakana, presence: true
+  validates :date_of_birth, presence: true
 end
