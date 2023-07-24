@@ -12,10 +12,10 @@ require 'rails_helper'
        expect(@user.errors.full_messages).to include("Nickname can't be blank")
      end
      it "emailが空では登録できない" do
-      user = FactoryBot.build(:user)
+      @user = FactoryBot.build(:user)
       @user.email = ''
       @user.valid?
-       expect(user.errors.full_messages).to include("Email can't be blank")
+       expect(@user.errors.full_messages).to include("Email can't be blank")
 
      end
    end
