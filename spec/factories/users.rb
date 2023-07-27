@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :user do
     nickname              {'test'}
     email                 {'test@example'}
-    password              {'000000'}
+    password              {'test'}
     password_confirmation      {password}
     name_chinese_characters{'test'}
     first_name_chinese_characters{'test'}
