@@ -11,7 +11,6 @@ require 'rails_helper'
     end
     context '新規登録できないとき' do
      it "nicknameが空だと登録できない" do
-      
       @user.nickname = ''
        @user.valid?
        expect(@user.errors.full_messages).to include("Nickname can't be blank")
@@ -21,7 +20,7 @@ require 'rails_helper'
       @user.email = ''
       @user.valid?
        expect(@user.errors.full_messages).to include("Email can't be blank")
-
+      end
       it '重複したemailが存在する場合は登録できない' do
         @user.save
         another_user = FactoryBot.build(:user)
@@ -36,13 +35,12 @@ require 'rails_helper'
         expect(@user.errors.full_messages).to include('Email is invalid')
       end
 
-       end
+       
       it "passwordが空では登録できない" do
         @user.password = ''
       @user.valid?
     expect(@user.errors.full_messages).to include("Password can't be blank")
-
-    end
+end
 
     it 'passwordが6文字未満では登録できない' do
       @user.password = '00000'
@@ -133,4 +131,7 @@ it "date_of_birthが空では登録できない" do
   @user.date_of_birth = ''
       @user.valid?
   expect(@user.errors.full_messages).to include("date_of_birth can't be blank")
+end
+ end
+ end
 end
