@@ -6,7 +6,9 @@ require 'rails_helper'
 
    describe "ユーザー新規登録" do
     context '新規登録できるとき' do
-      it 'nicknameとemail、passwordとpassword_confirmationが存在すれば登録できる' do
+      it 'すべての情報が存在すれば登録できる' do
+        user = User.new(nickname: 'やまだ', email: 'test@example', password: '000000', password_confirmation: '000000',name_chinese_characters:'山田',first_name_chinese_characters:'太郎',name_katakana:'ヤマダ',first_name_katakana:'タロウ',date_of_birth:'1998.1.2')
+        user.valid?
       end
     end
     context '新規登録できないとき' do
