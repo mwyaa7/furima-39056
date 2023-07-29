@@ -7,8 +7,8 @@ require 'rails_helper'
    describe "ユーザー新規登録" do
     context '新規登録できるとき' do
       it 'すべての情報が存在すれば登録できる' do
-        user = User.new(nickname: 'やまだ', email: 'test@example', password: '000000', password_confirmation: '000000',name_chinese_characters:'山田',first_name_chinese_characters:'太郎',name_katakana:'ヤマダ',first_name_katakana:'タロウ',date_of_birth:'1998.1.2')
-        user.valid?
+        expect(@user).to be_valid
+        
       end
     end
     context '新規登録できないとき' do
@@ -52,15 +52,15 @@ end
     end
 
     it '英字のみのパスワードでは登録できない' do
-      @user.password = ''
-      @user.password_confirmation = ''
+      @user.password = 'sssssss'
+      @user.password_confirmation = 'ssssss'
       @user.valid?
       expect(@user.errors.full_messages).to include("Password can't be only English")
     end
 
     it '数字のみのパスワードでは登録できない' do
-      @user.password = ''
-      @user.password_confirmation = ''
+      @user.password = '111111'
+      @user.password_confirmation = '111111'
       @user.valid?
       expect(@user.errors.full_messages).to include("Password can't be only number")
     end
